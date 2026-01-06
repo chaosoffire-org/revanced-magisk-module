@@ -546,8 +546,8 @@ patch_apk() {
 	local tmp_files
 	tmp_files="$(pwd)/$(mktemp -d -p "$TEMP_DIR")"
 
-	local cmd="java -jar '$cli_jar' patch '$stock_input' --purge -o '$patched_apk' -p '$patches_jar' --keystore=ks.keystore \
---keystore-entry-password=123456789 --keystore-password=123456789 --signer=jhc --keystore-entry-alias=jhc -t '$tmp_files' $patcher_args"
+	local cmd="env -u GITHUB_REPOSITORY java -jar '$cli_jar' patch '$stock_input' --purge -o '$patched_apk' -p '$patches_jar' --keystore=ks.keystore \
+--keystore-entry-password=${KEYSTORE_PASSWORD:-123456789} --keystore-password=${KEYSTORE_PASSWORD:-123456789} --signer=${KEYSTORE_ALIAS:-jhc} --keystore-entry-alias=${KEYSTORE_ALIAS:-jhc} -t '$tmp_files' $patcher_args"
 
 	# TODO: remove this later
 	local cli_name
