@@ -44,12 +44,29 @@ jobs:
           if [ -z "$TAG" ]; then TAG=0; fi
           echo "NEXT_VER_CODE=$((TAG + 1))" >> $GITHUB_OUTPUT
 
+      - name: Decrypt icon assets
+        env:
+          ICON_ZIP_PASSWORD: ${{ secrets.ICON_ZIP_PASSWORD }}
+        run: |
+          if [ -n "$ICON_ZIP_PASSWORD" ]; then
+            for app_dir in icon/*/; do
+              app_name=$(basename "$app_dir")
+              zip_file="${app_dir}icon.zip"
+              if [ -f "$zip_file" ]; then
+                echo "Decrypting icons for $app_name..."
+                unzip -P "$ICON_ZIP_PASSWORD" -o "$zip_file" -d "${app_dir}"
+              fi
+            done
+          fi
+
       - name: Build modules/APKs
         run: if [ -f "config.json" ]; then ./build.sh config.json; else ./build.sh config.toml; fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: $GITHUB_REPOSITORY
           NEXT_VER_CODE: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEYSTORE_ALIAS: ${{ secrets.KEYSTORE_ALIAS }}
 
       - name: Get output
         id: get_output
