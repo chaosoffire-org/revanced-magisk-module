@@ -8,27 +8,25 @@ parallel-jobs = 1
 
 [YouTube]
 build-mode = "both"
+excluded-patches = ""
+version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
-excluded-patches = ""
-included-patches = "'Custom branding' 'Change package name'"
-version = "auto"
-patcher-args = "-OcustomIcon=icon/YouTube -OpackageName=com.chaosoffire.android.youtube"
+patcher-args = "-e 'Custom branding' -OcustomIcon=icon/YouTube -e 'Change package name' -OpackageName=com.chaosoffire.revanced.youtube"
 
 [YouTube-Morphe]
 build-mode = "both"
-apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
-uptodown-dlurl = "https://youtube.en.uptodown.com/android"
-archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 app-name = "YouTube"
 patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 rv-brand = "Morphe"
 excluded-patches = ""
-included-patches = "'Custom branding' 'Change package name'"
 version = "auto"
-patcher-args = "-OcustomIcon=icon/YouTube -OpackageName=com.chaosoffire.android.youtube"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
+patcher-args = "-e 'Custom branding' -OcustomIcon=icon/YouTube -e 'Change package name' -OpackageName=com.chaosoffire.revanced.youtube"
 
 [Music]
 build-mode = "both"
@@ -37,9 +35,11 @@ arch = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
+patcher-args = "-OpackageName=com.chaosoffire.android.apps.youtube.music"
 
 [Music-Morphe]
 app-name = "Music"
+included-patches = "'Change package name'"
 patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 rv-brand = "Morphe"
@@ -48,6 +48,7 @@ arch = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
+patcher-args = "-OpackageName=com.chaosoffire.android.apps.youtube.music"
 
 [Reddit-Morphe]
 app-name = "Reddit"
