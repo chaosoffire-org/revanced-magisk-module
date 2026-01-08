@@ -3,6 +3,7 @@ Music: 8.10.52
 Music-Extended: 8.30.54  
 Spotify: 9.1.12.226  
 Twitch: 16.9.1  
+Twitter: 10.86.0-release.0  
 YouTube: 20.14.43  
 YouTube-Extended: 20.05.46  
 
