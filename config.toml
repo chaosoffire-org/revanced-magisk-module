@@ -10,12 +10,11 @@ cli-source = "ReVanced/revanced-cli"
 [YouTube]
 build-mode = "both"
 excluded-patches = ""
-included-patches = "'Custom branding' 'Change package name'"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
-# uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
-patcher-args = "-OcustomIcon=icon/YouTube -OpackageName=com.chaosoffire.android.youtube"
+patcher-args = "-e 'Custom branding' -OcustomIcon=icon/YouTube -e 'Change package name' -OpackageName=com.chaosoffire.android.youtube"
 
 [Music]
 build-mode = "both"
@@ -59,6 +58,8 @@ cli-source = "inotia00/revanced-cli"
 rv-brand = "ReVanced Extended"
 build-mode = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+patcher-args = "-e 'Custom branding' -OcustomIcon=icon/YouTube"
 
 [Twitch]
 enabled = true
