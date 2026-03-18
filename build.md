@@ -1,9 +1,6 @@
-GooglePhotos (arm64-v8a): 7.67.0.882706237  
-GooglePhotos (arm-v7a): 7.67.0.882706237  
-Music (arm64-v8a): 8.40.54  
-Music (arm-v7a): 8.40.54  
-Music-Morphe (arm64-v8a): 8.44.54  
-Music-Morphe (arm-v7a): 8.44.54  
+GooglePhotos: 7.67.0.882706237  
+Music: 8.40.54  
+Music-Morphe: 8.44.54  
 Reddit-Morphe: 2026.04.0  
 Twitch: 16.9.1  
 YouTube: 20.40.45  
