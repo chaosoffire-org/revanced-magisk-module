@@ -26,7 +26,7 @@ version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
-patcher-args = "-e 'Custom branding' -OcustomIcon=icon/YouTube -e 'Change package name' -OpackageName=com.chaosoffire.revanced.youtube"
+patcher-args = "-e 'Custom branding' -OcustomIcon=icon/YouTube-Morphe -e 'Change package name' -OpackageName=com.chaosoffire.morphe.youtube"
 
 [Music]
 build-mode = "apk"
