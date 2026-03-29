@@ -318,7 +318,7 @@ merge_splits() {
 		return 1
 	fi
 	# sign the merged stock apk
-	if ! OP=$(java -jar "$APKSIGNER" sign --ks ks-p12.keystore --ks-pass pass:123456789 --key-pass pass:123456789 --ks-key-alias jhc \
+	if ! OP=$(java -jar "$APKSIGNER" sign --ks ks-p12.keystore --ks-pass pass:${KEYSTORE_PASSWORD:-123456789} --key-pass pass:${KEYSTORE_PASSWORD:-123456789} --ks-key-alias ${KEYSTORE_ALIAS:-jhc} \
 		--out "${output}" "${output}-unsigned"); then
 		epr "apksigner error: $OP"
 		return 1
