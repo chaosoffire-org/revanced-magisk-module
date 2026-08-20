@@ -39,7 +39,7 @@ patcher-args = "-OpackageName=com.chaosoffire.android.apps.youtube.music"
 
 [Music-Morphe]
 app-name = "Music"
-included-patches = "'Change package name'"
+included-patches = "'Clone app'"
 patches-source = "MorpheApp/morphe-patches"
 cli-source = "MorpheApp/morphe-cli"
 rv-brand = "Morphe"
